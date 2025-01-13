@@ -1,8 +1,8 @@
 # Commented sections are optional. Uncomment them if you want to include them in config
 
-#publisher: # General publisher info section
-#    author: # Author info
-#    company: # Company info
+publisher: # General publisher info section
+    author: "Mykhailo Androsiuk"
+    company: "Epam"
 
 # How to build and sign package
 build:
@@ -15,8 +15,9 @@ build:
 # Information about publishing process (URI, cert, etc)
 publish:
     url: aoscloud.io
-    service_uid: d75bf5cd-cef0-40f7-9e74-73ce49df2bcb
+    service_uid: 09d1dff4-6f1b-4d88-bc3d-dc74053807b5
     tls_pkcs12: aos-user-sp.p12
+    version: 1.0.62
 
 # Service configuration
 configuration:
@@ -51,7 +52,7 @@ configuration:
 
     #    Quotas assigned to service
     quotas:
-        cpu: 50
+        cpu: 500
         mem: 100M
         #state: 64KB
         storage: 10M
@@ -83,5 +84,5 @@ configuration:
     #        minTime: string
     #        minThreshold: 10,
     #        maxThreshold: 150
-    #layers:
-    #   - py-libs-layer
+    layers:
+       - aos-pylibs-layer-spider
